@@ -5,9 +5,6 @@ const nextConfig = {
     BASE_URL: process.env.BASE_URL,
     DOMAIN: process.env.DOMAIN,
   },
-  images: {
-    domains: ["flowbite.com"],
-  },
 }
 
 module.exports = nextConfig
