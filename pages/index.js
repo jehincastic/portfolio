@@ -3,7 +3,7 @@ import PageTitle from "../components/PageTitle";
 import Section from "../components/Section";
 
 const title = "Hello, I'm Castic 👋";
-const subtitle = "I'm a software developer at Crayon'd, and living in Nagercoil, IN.";
+const subtitle = "I'm a software developer at Crayon'd, and living in Nagercoil, India.";
 
 const IndexPage = () => {
   return (
