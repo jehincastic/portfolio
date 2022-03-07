@@ -37,7 +37,7 @@ const ThemeIcon = () => {
         exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.2 }}
       >
-        {darkModeActive ? "🌙" : "🌤️"}
+        {darkModeActive ? "🌛" : "🌞"}
       </motion.button>
     </AnimatePresence>
   );
