@@ -1,17 +1,6 @@
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import socialConfig from "../config/social";
 
-const links = [
-  {
-    title: "Github",
-    Icon: FaGithub,
-    href: "https://github.com/jehincastic/",
-  },
-  {
-    title: "LinkedIn",
-    Icon: FaLinkedinIn,
-    href: "https://www.linkedin.com/in/jehincastic/",
-  },
-];
+const links = socialConfig.socialMediaLinks;
 
 const SocialIcons = () => (
   <div className="flex flex-row text-2xl my-6 text-gray-500 dark:text-gray-300">

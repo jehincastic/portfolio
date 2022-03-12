@@ -1,13 +1,14 @@
 import SocialIcons from "./SocialIcons";
+import socialConfig from "../config/social";
 
 const Footer = () => (
   <footer className="w-full flex flex-col items-center">
     <SocialIcons />
     <a
       className="text-sm mb-4 text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
-      href="mailto:jehincastic@gmail.com?Subject=Hello"
+      href={`mailto:${socialConfig.email}?Subject=Hello`}
     >
-      jehincastic@gmail.com
+      {socialConfig.email}
     </a>
     <a
       className="text-sm mb-8 text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
