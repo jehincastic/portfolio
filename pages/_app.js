@@ -5,10 +5,15 @@ import { useEffect } from "react"
 import { AnimatePresence } from "framer-motion"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import seoConfig from "../config/seo";
 
 
 const MyApp = ({ Component, pageProps, router }) => {
-  const url = `${process.env.BASE_URL}${router.route}`
+  const url = `${process.env.BASE_URL}${router.route}`;
+  const {
+    openGraph,
+    titleTemplate,
+  } = seoConfig(url);
   
   useEffect(() => {
     if (
@@ -46,15 +51,8 @@ const MyApp = ({ Component, pageProps, router }) => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <DefaultSeo
-        titleTemplate="%s - Castic Jehin"
-        openGraph={{
-          type: "website",
-          locale: "en_IN",
-          url,
-          description: "The personal website for Castic Jehin, Developer.",
-          site_name: `Castic Jehin | ${process.env.DOMAIN}`,
-          images: [],
-        }}
+        titleTemplate={titleTemplate}
+        openGraph={openGraph}
         canonical={url}
       />
       <Header />

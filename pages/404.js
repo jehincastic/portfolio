@@ -4,20 +4,23 @@ import { AnimatePresence, motion } from "framer-motion";
 import Layout from "../components/Layout";
 import Link from "../components/Link";
 import PageTitle from "../components/PageTitle";
+import pageConfig from "../config/page";
 
-const title = "Not Found";
-const subtitle = "The page you are looking for doesn't exist.";
+const {
+  subtitle,
+  title,
+} = pageConfig.notFound;
 
 const NotFound = () => {
   return (
     <AnimatePresence>
       <Layout
-        title="Home"
+        title={title}
         description={`${title} - ${subtitle}`}
         divClass="bg-gray-100 dark:bg-gray-900 pb-12 mb-10"
       >
         <PageTitle
-          title="404"
+          title={title}
           subtitle={subtitle}
           center
           icons={false}

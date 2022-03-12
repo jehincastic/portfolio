@@ -1,14 +1,16 @@
 import React from "react";
-import axios from "axios";
 
 import Layout from "../components/Layout";
 import Section from "../components/Section";
 import PageTitle from "../components/PageTitle";
 import Card from "../components/Card";
+import pageConfig from "../config/page";
 
-const title = "Projects 📚";
-const subtitle =
-  "A selection of projects I've worked on, during my career as a software developer.";
+const {
+  title,
+  subtitle,
+  getProjects,
+} = pageConfig.portfolioPage;
 
 const PortfolioPage = ({
   projects = [],
@@ -41,26 +43,7 @@ const PortfolioPage = ({
 };
 
 export const getStaticProps = async () => {
-  const repos = await axios.get("https://api.github.com/users/jehincastic/repos?sort=pushed");
-  const projectData = repos.data;
-  const projects = [];
-  projectData?.forEach(({
-    name,
-    description,
-    homepage,
-    html_url,
-    fork,
-  }) => {
-    if ((!fork) && description) {
-      const obj = {
-        title: name,
-        description: description,
-        githubUrl: html_url,
-        projectUrl: homepage || "",
-      };
-      projects.push(obj);
-    }
-  });
+  const projects = await getProjects();
   return {
     props: {
       projects,
