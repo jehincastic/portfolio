@@ -1,7 +1,5 @@
 import React from "react";
 
-import Link from "./Link";
-
 const Card = ({
   title,
   description,

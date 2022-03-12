@@ -22,7 +22,7 @@
   }
 
   .navigation-underline {
-    @apply w-full border border-orange-400 dark:border-yellow-300;
+    @apply w-full border border-orange-400 bg-orange-400 dark:border-yellow-300 dark:bg-yellow-300;
   }
 }
 
