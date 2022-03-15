@@ -8,7 +8,7 @@ const Card = ({
 }) => (
   <div className="mb-14 flex flex-col sm:flex-row w-full">
     <div className={`w-full text-gray-500 dark:text-gray-300 sm:w-4/5`}>
-      <h3 className="text-2xl font-bold italic text-gray-600 dark:text-gray-100">{title}</h3>
+      <div className="text-2xl font-bold italic text-gray-600 dark:text-gray-100">{title}</div>
       <p className="font-normal mt-2">{description}</p>
       {
         githubUrl && (
