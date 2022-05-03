@@ -7,7 +7,22 @@ const config = {
   title: "Timeline ⌛",
   subtitle: "The timeline of my life.",
   timelineData: [{
-    year: 2021,
+    year: `Apr 2022`,
+    icon: IoLogoJavascript,
+    data: {
+      title: (
+        <div className="text-md font-bold text-gray-500 lex dark:text-gray-300">
+          Joined <Link href="https://crayond.com">
+            <a className="text-orange-400 dark:text-yellow-300 italic">
+              SenseHawk
+            </a>
+          </Link> as Software Engineer.
+        </div>
+      ),
+      description: `Joined SenseHawk as a Software Engineer.`,
+    },
+  }, {
+    year: `May 2021`,
     icon: IoLogoJavascript,
     data: {
       title: (
@@ -24,7 +39,7 @@ const config = {
         Worked closely with the client to design and develop the platform.`,
     },
   }, {
-    year: 2019,
+    year: `Feb 2019`,
     icon: FaNodeJs,
     data: {
       title: (
@@ -37,7 +52,7 @@ const config = {
         </div>
       ),
       description: `Landed my first job at Chainsys as a NodeJS developer soon after my graduation.
-        Worked on a no-code platform.`,
+        Worked on a building a no-code platform.`,
     },
   }, {
     year: 2019,

@@ -1,7 +1,7 @@
 const config = {
   pageName: "Home",
   title: "Hello, I'm Castic 👋",
-  subtitle: "I'm a software developer at Crayon'd and currently in Nagercoil, India.",
+  subtitle: "I'm a Software Engineer at SenseHawk and currently in Nagercoil, India.",
   subHeading: "About",
   subContent: `I like to spend most of my time as a backend developer.
   My go to tool for backend developement is Node JS.

@@ -2,7 +2,7 @@ import axios from "axios";
 
 const config = {
   title: "Projects 📚",
-  subtitle: "A selection of projects I've worked on, during my career as a software developer.",
+  subtitle: "A selection of projects I've worked on, during my career as a Software Engineer.",
   getProjects: async () => {
     try {
       const repos = await axios.get("https://api.github.com/users/jehincastic/repos?sort=pushed");
