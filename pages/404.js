@@ -17,7 +17,7 @@ const NotFound = () => {
       <Layout
         title={title}
         description={`${title} - ${subtitle}`}
-        divClass="bg-gray-300 dark:bg-gray-900 pb-12 mb-10"
+        divClass="bg-gray-100 dark:bg-gray-900 pb-12 mb-10"
       >
         <PageTitle
           title={title}

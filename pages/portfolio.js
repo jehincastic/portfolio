@@ -19,7 +19,7 @@ const PortfolioPage = ({
     <Layout
       title={title}
       description={subtitle}
-      divClass="bg-gray-300 dark:bg-gray-900 pb-14 mb-14"
+      divClass="bg-gray-100 dark:bg-gray-900 pb-14 mb-14"
     >
       <PageTitle
         title={title}
