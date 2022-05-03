@@ -75,10 +75,14 @@ const config = {
     data: {
       title: (
         <div className="text-md font-bold text-gray-500 lex dark:text-gray-300">
-          Graduated High School.
+          Graduated <Link href="http://www.stjosephmhss-ngl.com/">
+            <a className="text-orange-400 dark:text-yellow-300 italic">
+              School
+            </a>
+          </Link>
         </div>
       ),
-      description: "Graduated High School."
+      description: "Graduated School."
     }
   }],
 };
