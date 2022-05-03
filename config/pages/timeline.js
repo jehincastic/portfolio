@@ -12,7 +12,7 @@ const config = {
     data: {
       title: (
         <div className="text-md font-bold text-gray-500 lex dark:text-gray-300">
-          Joined <Link href="https://crayond.com">
+          Joined <Link href="https://sensehawk.com/">
             <a className="text-orange-400 dark:text-yellow-300 italic">
               SenseHawk
             </a>
