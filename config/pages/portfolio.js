@@ -6,9 +6,14 @@ const config = {
   getProjects: () => {
     return [{
       title: "DocParser",
-      description: "description",
+      description: "A platform that allows users to upload a Docx file and a JSON object to replace placeholders, then export the result as a PDF/Docx.",
       githubUrl: "",
       projectUrl: "https://doc.jehincastic.dev/",
+    }, {
+      title: "Canva Clone",
+      description: "A canva clone build using Next JS",
+      githubUrl: "https://github.com/jehincastic/canva_clone",
+      projectUrl: "https://canva-clone-green.vercel.app/",
     }];
   },
 };
