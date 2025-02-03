@@ -43,7 +43,7 @@ const PortfolioPage = ({
 };
 
 export const getStaticProps = async () => {
-  const projects = await getProjects();
+  const projects = getProjects();
   return {
     props: {
       projects,
