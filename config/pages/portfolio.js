@@ -14,6 +14,11 @@ const config = {
       description: "A canva clone build using Next JS",
       githubUrl: "https://github.com/jehincastic/canva_clone",
       projectUrl: "https://canva-clone-green.vercel.app/",
+    }, {
+      title: "Transaltor",
+      description: "An app to find the missing transaltion keys",
+      githubUrl: "https://github.com/jehincastic/transaltor",
+      projectUrl: "https://translator.jehincastic.dev/",
     }];
   },
 };
