@@ -10,6 +10,11 @@ const config = {
       githubUrl: "",
       projectUrl: "https://doc.jehincastic.dev/",
     }, {
+      title: "ExpenseTracker",
+      description: "A simple app to track all your expenses. (credentials for testing: test@test.com / test@test.com)",
+      githubUrl: "",
+      projectUrl: "https://expense.jehincastic.dev/",
+    }, {
       title: "Canva Clone",
       description: "A canva clone build using Next JS",
       githubUrl: "https://github.com/jehincastic/canva_clone",
