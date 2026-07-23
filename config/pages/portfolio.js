@@ -6,9 +6,9 @@ const config = {
   getProjects: () => {
     return [{
       title: "DocParser",
-      description: "A platform that allows users to upload a Docx file and a JSON object to replace placeholders, then export the result as a PDF/Docx.",
+      description: "A platform that allows users to upload a Docx file and a JSON object to replace placeholders, then export the result as a PDF/Docx. This is work in progress.",
       githubUrl: "",
-      projectUrl: "https://doc.jehincastic.dev/",
+      projectUrl: "",
     }, {
       title: "ExpenseTracker",
       description: "A simple app to track all your expenses. (credentials for testing: test@test.com / test@test.com)",
