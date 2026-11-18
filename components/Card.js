@@ -1,4 +1,5 @@
 import React from "react";
+import posthog from "posthog-js";
 
 const Card = ({
   title,
@@ -15,6 +16,7 @@ const Card = ({
           <a
             className="text-base mt-2 underline text-orange-400 dark:text-yellow-300 font-semibold italic transition-colors"
             href={githubUrl}
+            onClick={() => posthog.capture("project_github_opened", { project_title: title })}
           >
             Github URL
           </a>
@@ -33,6 +35,7 @@ const Card = ({
           <a
             className="text-base mt-2 underline text-orange-400 dark:text-yellow-300 font-semibold italic transition-colors"
             href={projectUrl}
+            onClick={() => posthog.capture("project_demo_opened", { project_title: title })}
           >
             Project URL
           </a>

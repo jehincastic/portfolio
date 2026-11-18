@@ -1,3 +1,4 @@
+import posthog from "posthog-js";
 import socialConfig from "../config/social";
 
 const links = socialConfig.socialMediaLinks;
@@ -8,6 +9,7 @@ const SocialIcons = () => (
       <a
         key={href}
         href={href}
+        onClick={() => posthog.capture("social_profile_opened", { platform: title })}
         target="_blank"
         rel="noopener noreferrer nofollow"
         className={`hover:text-gray-800 dark:hover:text-white transition-colors ${

@@ -1,3 +1,4 @@
+import posthog from "posthog-js";
 import SocialIcons from "./SocialIcons";
 import socialConfig from "../config/social";
 
@@ -7,6 +8,7 @@ const Footer = () => (
     <a
       className="text-sm mb-4 text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
       href={`mailto:${socialConfig.email}?Subject=Hello`}
+      onClick={() => posthog.capture("contact_email_opened")}
     >
       {socialConfig.email}
     </a>

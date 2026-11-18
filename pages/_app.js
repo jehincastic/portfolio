@@ -3,10 +3,30 @@ import Head from "next/head"
 import { DefaultSeo } from "next-seo"
 import { useEffect } from "react"
 import { AnimatePresence } from "framer-motion"
+import posthog from "posthog-js"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ErrorBoundary from "../components/ErrorBoundary";
 import seoConfig from "../config/seo";
 
+const token = process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN
+const host = process.env.NEXT_PUBLIC_POSTHOG_HOST
+
+if (typeof window !== "undefined") {
+  if (token && host) {
+    posthog.init(token, {
+      api_host: host,
+      capture_exceptions: true,
+      debug: process.env.NODE_ENV === "development",
+    })
+  } else if (process.env.NODE_ENV === "development") {
+    const missingVariable = token
+      ? "NEXT_PUBLIC_POSTHOG_HOST"
+      : "NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN"
+
+    throw new Error(`${missingVariable} variable required by PostHog is missing or un-configured, this causes events to be silently missed. This error stops appearing once ${missingVariable} is configured`)
+  }
+}
 
 const MyApp = ({ Component, pageProps, router }) => {
   const url = `${process.env.BASE_URL}${router.route}`;
@@ -30,7 +50,8 @@ const MyApp = ({ Component, pageProps, router }) => {
   });
 
   return (
-    <>
+    <ErrorBoundary>
+      <>
       <Head>
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -64,7 +85,8 @@ const MyApp = ({ Component, pageProps, router }) => {
       <Component {...pageProps} canonical={url} key={url} />
       </AnimatePresence>
       <Footer />
-    </>
+      </>
+    </ErrorBoundary>
   );
 };
 
